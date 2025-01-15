@@ -6,3 +6,9 @@
 #
 # Example input:  1,2,3,4,5,6,7,8,9,10
 # Example output: 2,4,6,8,10,9,7,5,3,1
+output_list = []
+input_list = [1,2,3,4,5,6,7,8,9,10]
+len_list = len(input_list)
+output_list = input_list[1::2] + input_list[len_list-2::-2]
+
+print(output_list)
