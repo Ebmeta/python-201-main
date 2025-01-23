@@ -11,9 +11,25 @@
 #
 # Note: This lab might be challenging! Make sure to discuss it 
 # with your mentor or chat about it on our forum.
+# Write your code below here
 
 from resources import randlist
 
-print(randlist)
+list_ = randlist
+print("input list",list_)
+list_.sort()
+print("sorted list",list_)
+list_tuple_2 =[]
+if len(list_) % 2 == 1:
+    list_= list_+ [0]
+for i in range(0, len(list_) +1, 2):
+    pair = tuple(list_[i:i+2])
+    print(pair)
+    list_tuple_2.append(pair)
 
-# Write your code below here
+
+print(list_tuple_2)
+
+
+
+
