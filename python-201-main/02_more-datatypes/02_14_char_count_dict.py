@@ -4,3 +4,7 @@
 #
 # user_input = "hello"
 # result = {"h": 1, "e": 1, "l": 2, "o": 1}
+
+user_input = "zun zum zil"
+dic_ = { i : user_input.count(i) for i in user_input}
+print(dic_)
