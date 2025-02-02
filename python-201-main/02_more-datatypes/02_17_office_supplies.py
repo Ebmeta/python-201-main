@@ -4,6 +4,7 @@
 #
 # LASTNAME, Name           Office supply item
 # LONGERLASTNAME, Name     Office supply item
+from itertools import count
 
 office = [
     {"full_name": "Michael Scott", "item": "world's best boss mug"},
@@ -22,3 +23,15 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+max_name = max(len(x['full_name']) for x in office)
+max_item = max(len(x["item"]) for x in office)
+# print(max_name , max_item)
+max_str = max_name + max_item
+
+
+for man in office:
+    lastname = man['full_name'].split()[1].upper()
+    name = man['full_name'].split()[0]
+    item = man['item'].title()
+    count_space = max_str - len(man['full_name']) - len(item)
+    print(f"{lastname},{name}{count_space*' '}{item}")
