@@ -6,3 +6,8 @@
 # but try to do it using a list comprehension.
 
 word = "codingnomads"
+word_list_1 = list(word)
+word_list_2 = [i for i in word]
+print("word with list()             : ", word_list_1)
+print("word with list comprehension : ", word_list_1)
+
